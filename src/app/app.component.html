@@ -1,8 +1,5 @@
 <div class="container mt-5 d-flex w-100">
-  <app-auth-form (submitted)="createUser($event)" class="w-50 p-2 border border-1 m-2">
-    <h3>Create Account</h3>
-    <button class="btn btn-primary" type="submit">Join Us</button>
-  </app-auth-form>
+  
   <app-auth-form (submitted)="loginUser($event)" class="w-50 p-2 border border-1 m-2">
     <h3>Login Account</h3>
     <app-auth-remember (checked)="rememberUser($event)"></app-auth-remember>
