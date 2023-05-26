@@ -7,14 +7,14 @@ import { AuthRememberComponent } from '../auth-remember/auth-remember.component'
   styleUrls: ['./auth-form.component.scss']
 })
 export class AuthFormComponent implements AfterContentInit,AfterViewInit{
-  
-  
+  title="Login";
   name!:string;
   password!:string;
   showMessage:boolean=false;
   @ContentChild(AuthRememberComponent)
   @Output()
   submitted:EventEmitter<any>=new EventEmitter();
+  
   remember!:AuthRememberComponent;
   @ViewChild('email')
   email!:ElementRef;
