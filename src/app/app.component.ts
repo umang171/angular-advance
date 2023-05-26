@@ -12,15 +12,19 @@ export class AppComponent implements AfterViewInit, AfterContentInit {
   @ViewChild('tmpl')
   tmpl!: TemplateRef<any>;
 
+  ctx={
+    $implicit:"Umang gohel",
+    location:"Rajkot"
+  }
   constructor() {}
 
   ngAfterContentInit(): void {}
 
   ngAfterViewInit(): void {
-    this.entry.createEmbeddedView(this.tmpl,{
-      $implicit:"Umang gohol",
-      location:"Rajkot"
-    });
+    // this.entry.createEmbeddedView(this.tmpl,{
+    //   $implicit:"Umang gohol",
+    //   location:"Rajkot"
+    // });
   }
 
   loginUser(event: any) {
