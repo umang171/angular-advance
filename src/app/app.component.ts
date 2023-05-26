@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'tutorial';
+  remember:boolean=false;
+  rememberUser(remember:boolean){
+    this.remember=remember;
+  }
+ 
+  createUser(event:any){
+    console.log(event);
+  }
+  loginUser(event:any){
+    console.log(event,this.remember);
+  }
 }
