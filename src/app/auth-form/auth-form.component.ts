@@ -20,9 +20,7 @@ export class AuthFormComponent implements AfterContentInit,AfterViewInit{
   email!:ElementRef;
 
   ngAfterContentInit(): void {
-    if(this.remember){
-      this.remember.checked.subscribe((checked:boolean)=>this.showMessage=checked);
-    }
+    
   }
   ngAfterViewInit(): void {
     this.email.nativeElement.setAttribute("placeholder","Email");

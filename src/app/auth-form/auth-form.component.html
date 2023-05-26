@@ -7,7 +7,6 @@
         <label for="password">Password</label>
         <input type="password" [(ngModel)]="password" name="password" class="form-control my-2" placeholder="Enter password">
         <ng-content select="app-auth-remember"></ng-content><br>
-        <div *ngIf="showMessage">You are remembered for 30 days</div>
         <ng-content select="button"></ng-content>
     </form>
 </div>

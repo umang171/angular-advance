@@ -1,19 +1,21 @@
-import { Component } from '@angular/core';
+import { AfterContentInit, Component, ViewChild, ViewContainerRef,ComponentFactoryResolver, AfterViewInit } from '@angular/core';
+import { AuthFormComponent } from './auth-form/auth-form.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit{
   remember:boolean=false;
-  rememberUser(remember:boolean){
-    this.remember=remember;
+  @ViewChild('entry',{read:ViewContainerRef})
+  entry!:ViewContainerRef;
+  constructor(){}
+
+  ngAfterViewInit(): void {
+    const component=this.entry.createComponent(AuthFormComponent);
   }
- 
-  createUser(event:any){
-    console.log(event);
-  }
+
   loginUser(event:any){
     console.log(event,this.remember);
   }
